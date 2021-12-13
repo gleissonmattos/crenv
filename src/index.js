@@ -1,13 +1,16 @@
-const env = new Proxy(typeof window !== "undefined" ? window.env : process.env, {
-    get: (envObj, prop) => {
-        if (!(String(prop) in envObj)) {
-            throw new Error(
-                `Environment variable '${String(prop)}' is not defined`
-            );
-        }
+/* !
+* runtime-environment
+* Copyright(c) 2020 Gleisson Mattos
+* http://github.com/gleissonmattos
+*
+* Licensed under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
 
-        return envObj[String(prop)];
-    },
+const env = new Proxy((typeof window !== "undefined" ? window.env : process.env), {
+  get: (environments, propertie) => {
+    return environments[String(propertie)];
+  },
 });
 
 module.exports = env;

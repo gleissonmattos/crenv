@@ -7,8 +7,6 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
-const main = require('./main');
-
-module.exports = {
-  main,
-};
+export const env: {
+  [key: string]: string;
+}

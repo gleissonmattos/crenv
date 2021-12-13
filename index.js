@@ -7,8 +7,4 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
-const main = require('./main');
-
-module.exports = {
-  main,
-};
+module.exports = require('./src/index');
