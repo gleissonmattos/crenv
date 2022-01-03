@@ -1,6 +1,6 @@
 {
   "name": "crenv",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Performs the loading and reading of cross-side environment variables at runtime, on the server and in the browser, including generated static HTML pages.",
   "main": "src/index",
   "engine": {

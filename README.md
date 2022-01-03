@@ -17,7 +17,7 @@ This is especially useful for SSR projects like those written in [REACT](https:/
 This way we can access the client and server side variables automatically like this:
 
 ```javascript
-import env from "runtime-environment";
+import env from "crenv";
 
 // read client and server side environments
 env.APPLICATION_ENV_HELLO
@@ -28,13 +28,13 @@ Then you no longer need to worry about dealing with process.env or knowing how a
 Installation is easy with the [npm](https://www.npmjs.com) command:
 
 ```bash
-$ npm install --save runtime-environment
+$ npm install --save crenv
 ```
 
 If you only need the *cli* outside the project, you can install the lib globally:
 
 ```bash
-$ npm install -g runtime-environment
+$ npm install -g crenv
 ```
 
 # cli
@@ -68,7 +68,7 @@ window.env = {
 Your project will automatically handle variables when you access them this way.
 On ssr pages for example, they will work in server-side as well as client-side rendering.
 ```jsx
-import env from "runtime-environment"
+import env from "crenv"
 
 export default () => (
   <div>
@@ -79,13 +79,13 @@ export default () => (
 
 ```javascript
 // API client integration file
-import env from "runtime-environment"
+import env from "crenv"
 
 export const getPosts = () => fetch(`${env.MY_CROSS_ENV_API_URL}/posts`);
 ```
 
 OBS.: 
-- If no target dotenv file is defined or no environment is defined the *runtime-environment* will read the environment variables from where it is running, from `process.env`.
+- If no target dotenv file is defined or no environment is defined the *crenv* will read the environment variables from where it is running, from `process.env`.
 - You need to define a prefix before running the command. If not defined, the default prefix is ​​`APPLICATION_ENV`. Only variables with the defined prefix are loaded, as in the example above.
 
 ## cli options
