@@ -7,7 +7,7 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
-const env = new Proxy((typeof window !== "undefined" ? window.env : process.env), {
+const env = new Proxy(typeof window !== "undefined" ? window.env || {} : process.env, {
   get: (environments, propertie) => {
     return environments[String(propertie)];
   },
