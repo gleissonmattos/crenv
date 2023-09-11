@@ -44,8 +44,8 @@ module.exports = (options, [, program]) => {
 
   fs.writeFileSync(clientFileEnv, content);
 
-  shell.echo('crosenv:', 'client environment file generated at \x1b[36m', clientFileEnv, '\x1b[0m');
-  shell.echo('crosenv:', 'add on your client page: \x1b[36m', '<script type="text/javascript" src="[publicPath]/envs.js"></script>', '\x1b[0m');
+  shell.echo('crenv:', 'client environment file generated at \x1b[36m', clientFileEnv, '\x1b[0m');
+  shell.echo('crenv:', 'add on your client page: \x1b[36m', '<script type="text/javascript" src="[publicPath]/envs.js"></script>', '\x1b[0m');
 
   if (args.length && shell.exec(args.join(' ')).code !== 0) {
     shell.echo('Error: Git commit failed');
