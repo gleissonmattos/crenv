@@ -1,6 +1,6 @@
 /* !
 * crenv
-* Copyright(c) 2020 Gleisson Mattos
+* Copyright(c) 2023 Gleisson Mattos
 * http://github.com/gleissonmattos
 *
 * Licensed under the MIT license.
@@ -10,3 +10,5 @@
 export const env: {
   [key: string]: string;
 }
+
+export default env;
