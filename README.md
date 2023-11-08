@@ -90,23 +90,11 @@ OBS.:
 
 ## cli options
 
-##### -e / --env
-Set the target *environment*. The lib is read based on dotenv file sufix: `.env.[environment]`.
-
-##### -t / --target
-Set target dotenv file: `crenv -t ./.env.develop`.
-
-##### --public
-Set the public project path. When run command the `envs.js` will be generated in this path.
-The default path value is `./public/`.
-
-##### --prefix
-Set prefix environment variables. All variables with prefix will be understood as cross and will also be passed to the client-side.
-On the server, all variables can be read through this module. On the client, only those with a defined prefix can be accessed.
-The default prefix is `APPLICATION_ENV`.
-
-##### -v / --version
-Show current lib version
-
-##### -h / --help
-Show help commands
+| Command               | Description                                                                                   |
+|-----------------------|-----------------------------------------------------------------------------------------------|
+| -e / --env            | Set the target environment. The lib is read based on dotenv file suffix: .env.[environment].   |
+| -t / --target         | Set target dotenv file: crenv -t ./.env.develop.                                               |
+| --public              | Set the public project path. When run the command, the envs.js will be generated in this path. The default path value is ./public/. |
+| --prefix              | Set prefix environment variables. All variables with prefix will be understood as global and will also be passed to the client-side. On the server, all variables can be read through this module. On the client, only those with a defined prefix can be accessed. The default prefix is APPLICATION_ENV. |
+| -v / --version        | Show current lib version                                                                      |
+| -h / --help           | Show help commands                                                                            |
